@@ -3,134 +3,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>GearHive | Useful Tech Accessories</title>
-  <meta name="description" content="GearHive finds practical gadgets that make everyday life easier—focused recommendations, concise and useful.">
-
-  <link rel="stylesheet" href="style.css">
+  <title>GearHive | AI Tools & Automation Systems for Modern Businesses</title>
+  <meta name="description" content="GearHive helps modern businesses deploy AI tools, automation systems, chatbots, and productivity stacks that improve speed, output, and operational performance.">
+  <link rel="stylesheet" href="style.css?v=20260302">
 </head>
 <body>
-
-  <div class="email-modal">
-    <div class="modal-card">
-      <button class="modal-close" aria-label="Close signup">×</button>
-      <h2>Get updates on useful gear</h2>
-      <p class="modal-copy">Be first to know when we find gadgets that make life easier. Occasional updates.</p>
-      <form class="email-form" action="/signup" method="post">
+  <div class="email-modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="signup-title">
+      <button class="modal-close" type="button" aria-label="Close email signup">×</button>
+      <p class="eyebrow">Get Updates</p>
+      <h2 id="signup-title">Get AI tools and automation insights</h2>
+      <p class="modal-copy">Short updates on new tools, practical workflows, and implementation playbooks.</p>
+      <form class="email-capture-form" novalidate>
         <label for="modal-email">Email</label>
         <div class="email-row">
           <input id="modal-email" name="email" type="email" placeholder="you@example.com" required>
-          <button type="submit">Join list</button>
+          <button type="submit" class="button button-primary">Join</button>
         </div>
+        <p class="email-note" aria-live="polite"></p>
       </form>
     </div>
   </div>
 
-  <header class="navbar">
-    <div class="logo">
-      <img src="assets/gearhive-logo.png" alt="GearHive logo">
-      <span>GearHive</span>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="index.html" aria-label="GearHive home">
+        <img src="assets/gearhive-logo.png" alt="GearHive logo">
+        <span>GearHive</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="accessories.html">AI Tools</a>
+        <a href="insights.html">Insights</a>
+        <a href="for-businesses.html">For Businesses</a>
+        <a href="about.html">About</a>
+      </nav>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="accessories.html">Accessories</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
-  <section class="hero home-hero" id="home">
-    <div class="hero-copy">
-      <h1>Simple Tech.<br>Smart Choices.</h1>
-      <p>GearHive highlights practical gadgets and accessories that make everyday life easier. Concise recommendations, no endless scrolling.</p>
-      <div class="hero-actions">
-        <a class="cta" href="accessories.html">Explore Accessories</a>
-        <a class="ghost" href="about.html">How We Choose</a>
+  <main>
+    <section class="hero">
+      <div class="container hero-layout hero-layout-single">
+        <div class="hero-copy">
+          <p class="eyebrow">AI Infrastructure for Growth</p>
+          <h1>AI Tools &amp; Automation Systems for Modern Businesses.</h1>
+          <p>GearHive helps teams and digital builders choose the right AI stack, automate repetitive workflows, and ship high-performance systems that save time and increase output.</p>
+          <p class="quick-note">New here? Use the "Choose Your Path" section below to go to the right page fast.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="accessories.html">Explore AI Tools</a>
+            <a class="button button-secondary" href="for-businesses.html">Book AI Setup Support</a>
+          </div>
+        </div>
       </div>
-      <form class="email-form email-signup" action="/signup" method="post">
-        <label for="email">Get product updates and offers</label>
-        <div class="email-row">
-          <input id="email" name="email" type="email" placeholder="you@example.com" required>
-          <button type="submit">Send me updates</button>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Choose Your Path</h2>
+        <p class="section-intro">Pick the option that matches what you need right now.</p>
+        <div class="decision-grid">
+          <article class="card decision-card">
+            <h3>I want the right AI tools</h3>
+            <p>Compare tool categories and recommendations for real business workflows.</p>
+            <a class="button button-secondary" href="accessories.html">Go to AI Tools</a>
+          </article>
+          <article class="card decision-card">
+            <h3>I want to learn automation</h3>
+            <p>Read publication-grade insights on AI systems, automation strategy, and execution frameworks.</p>
+            <a class="button button-secondary" href="insights.html">Go to Insights</a>
+          </article>
+          <article class="card decision-card">
+            <h3>I want done-for-you setup</h3>
+            <p>See service options for chatbot setup and workflow deployment.</p>
+            <a class="button button-secondary" href="for-businesses.html">Go to Services</a>
+          </article>
         </div>
-      </form>
-      <div class="hero-meta">
-        <div class="meta-card">
-          <span class="meta-label">Built for daily use</span>
-          <strong>Durable cables, efficient chargers, organized carry solutions.</strong>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>What GearHive Delivers</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>AI Tools</h3>
+            <p>Keyword-focused recommendations for copy, research, support, CRM, and execution workflows.</p>
+          </article>
+          <article class="card">
+            <h3>Insights</h3>
+            <p>Step-by-step implementation content for teams building reliable AI automation systems.</p>
+          </article>
+          <article class="card">
+            <h3>Business Setup Services</h3>
+            <p>Hands-on chatbot, workflow, and productivity system setup for modern business operations.</p>
+          </article>
         </div>
-        <div class="meta-card">
-          <span class="meta-label">Decisions, fast</span>
-          <strong>Clear picks and criteria in under two minutes.</strong>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <h2>Built for Performance</h2>
+        <p class="section-intro">Every recommendation and system is evaluated for speed to implement, measurable impact, and long-term operational value.</p>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Outcome-First Selection</h3>
+            <p>We prioritize tools that improve throughput, reduce manual steps, and scale with your workflows.</p>
+          </article>
+          <article class="card">
+            <h3>Practical Implementation</h3>
+            <p>Clear architecture guidance for connecting AI chatbots, automations, and productivity systems.</p>
+          </article>
         </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© 2026 GearHive. AI tools and automation systems for modern businesses.</p>
+      <div class="footer-links">
+        <a href="#join-updates" data-open-signup>Get Updated</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <p>© 2026 GearHive • <a href="contact.html">Contact</a></p>
   </footer>
-
   <script>
-    // Handle all email forms
-    const emailForms = document.querySelectorAll('.email-form');
-    emailForms.forEach((form) => {
-      const note = form.querySelector('.email-note');
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const emailInput = form.email;
-        const email = emailInput.value.trim();
-        if (!email) return;
-        if (note) note.textContent = 'Submitting...';
+    (() => {
+      const modal = document.querySelector('.email-modal');
+      const closeButton = document.querySelector('.modal-close');
+      const form = document.querySelector('.email-capture-form');
+      const note = form?.querySelector('.email-note');
+      const storageKey = 'gearhive_signup_seen';
+      const openTriggers = document.querySelectorAll('[data-open-signup]');
+
+      if (!modal || !form) return;
+
+      const storage = (() => {
         try {
-          const res = await fetch('/signup', {
+          return window.localStorage;
+        } catch (_) {
+          return null;
+        }
+      })();
+
+      const openModal = () => {
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+      };
+
+      const markSeen = () => {
+        try {
+          storage?.setItem(storageKey, '1');
+        } catch (_) {}
+      };
+
+      const closeModal = () => {
+        modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        markSeen();
+      };
+
+      const openedFromHash = window.location.hash === '#join-updates';
+      if (openedFromHash) {
+        openModal();
+        if (window.history?.replaceState) {
+          window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+      } else if (!storage?.getItem(storageKey)) {
+        openModal();
+      }
+
+      openTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', (event) => {
+          event.preventDefault();
+          openModal();
+        });
+      });
+
+      closeButton?.addEventListener('click', closeModal);
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) closeModal();
+      });
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('show')) closeModal();
+      });
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const emailInput = form.elements.email;
+        const email = emailInput.value.trim();
+        const setNote = (text) => {
+          if (note) note.textContent = text;
+        };
+        if (!email) {
+          setNote('Please enter your email.');
+          return;
+        }
+
+        setNote('Submitting...');
+        try {
+          const response = await fetch('/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email }),
           });
-          if (!res.ok) throw new Error('Failed');
-          if (note) note.textContent = 'Thanks! You are on the list.';
+          if (!response.ok) throw new Error('signup-failed');
+          setNote('Thanks. You are on the list.');
           emailInput.value = '';
-        } catch (err) {
-          if (note) note.textContent = 'Something went wrong. Please try again.';
+          markSeen();
+          setTimeout(closeModal, 700);
+        } catch (_) {
+          setNote('Could not submit. Please try again.');
         }
       });
-    });
-
-    // Modal controls
-    const modal = document.querySelector('.email-modal');
-    const closeBtn = document.querySelector('.modal-close');
-    const STORAGE_KEY = 'gearhive_signup_seen';
-    // Use sessionStorage so the prompt returns on a new visit
-    const storage = (() => {
-      try { return window.sessionStorage; } catch (_) { return null; }
     })();
-
-    const markSeen = () => {
-      try { storage?.setItem(STORAGE_KEY, '1'); } catch (_) {}
-    };
-
-    const closeModal = () => {
-      modal?.classList.remove('show');
-      document.body.classList.remove('modal-open');
-      markSeen();
-    };
-
-    if (modal && !storage?.getItem(STORAGE_KEY)) {
-      modal.classList.add('show');
-      document.body.classList.add('modal-open');
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-      });
-    }
-
-    closeBtn?.addEventListener('click', closeModal);
-
-    // Mark seen after a successful submit (for the modal form)
-    const modalForm = modal?.querySelector('form');
-    if (modalForm) {
-      modalForm.addEventListener('submit', () => markSeen());
-    }
   </script>
 </body>
 </html>
