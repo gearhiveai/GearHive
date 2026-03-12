@@ -47,8 +47,7 @@
         <div class="hero-copy">
           <p class="eyebrow">AI Infrastructure for Growth</p>
           <h1>AI Tools &amp; Automation Systems for Modern Businesses.</h1>
-          <p>Pinovio helps teams and digital builders choose the right AI stack, automate repetitive workflows, and ship high-performance systems that save time and increase output.</p>
-          <p class="quick-note">New here? Use the "Choose Your Path" section below to go to the right page fast.</p>
+          <p>Pinovio helps teams choose the right AI tools, learn practical automation, and get support setting up systems that remove manual work.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="accessories.html">Explore AI Tools</a>
             <a class="button button-secondary" href="for-businesses.html">Book AI Setup Support</a>
@@ -81,42 +80,44 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-muted">
       <div class="container">
-        <h2>What Pinovio Delivers</h2>
-        <div class="grid grid-3">
-          <article class="card">
-            <h3>AI Tools</h3>
-            <p>Keyword-focused recommendations for copy, research, support, CRM, and execution workflows.</p>
+        <h2>News and Updates</h2>
+        <p class="section-intro">Use this area to highlight the latest articles and any new AI tools you add to the site.</p>
+        <div class="grid grid-2">
+          <article class="card update-card">
+            <div class="update-card-header">
+              <p class="publication-meta">Latest Articles</p>
+              <a href="insights.html">View all</a>
+            </div>
+            <div class="update-list">
+              <a class="update-item" href="best-ai-tools-small-businesses-2026.html">
+                <span class="update-title">10 Best AI Tools for Small Businesses in 2026</span>
+                <span class="update-meta">Published March 9, 2026</span>
+              </a>
+              <a class="update-item" href="best-free-ai-tools-2026.html">
+                <span class="update-title">15 Best Free AI Tools in 2026</span>
+                <span class="update-meta">Published March 9, 2026</span>
+              </a>
+            </div>
           </article>
-          <article class="card">
-            <h3>Insights</h3>
-            <p>Step-by-step implementation content for teams building reliable AI automation systems.</p>
-          </article>
-          <article class="card">
-            <h3>Business Setup Services</h3>
-            <p>Hands-on chatbot, workflow, and productivity system setup for modern business operations.</p>
+
+          <article class="card update-card">
+            <div class="update-card-header">
+              <p class="publication-meta">Latest AI Tools</p>
+              <a href="accessories.html">View tools</a>
+            </div>
+            <div class="update-list">
+              <div class="update-item update-item-static">
+                <span class="update-title">No tools added yet</span>
+                <span class="update-meta">Add your newest tool listings here as they go live.</span>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-muted">
-      <div class="container">
-        <h2>Built for Performance</h2>
-        <p class="section-intro">Every recommendation and system is evaluated for speed to implement, measurable impact, and long-term operational value.</p>
-        <div class="grid grid-2">
-          <article class="card">
-            <h3>Outcome-First Selection</h3>
-            <p>We prioritize tools that improve throughput, reduce manual steps, and scale with your workflows.</p>
-          </article>
-          <article class="card">
-            <h3>Practical Implementation</h3>
-            <p>Clear architecture guidance for connecting AI chatbots, automations, and productivity systems.</p>
-          </article>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -135,19 +136,9 @@
       const closeButton = document.querySelector('.modal-close');
       const form = document.querySelector('.email-capture-form');
       const note = form?.querySelector('.email-note');
-      const storageKey = 'pinovio_signup_seen';
-      const legacyStorageKey = 'gearhive_signup_seen';
       const openTriggers = document.querySelectorAll('[data-open-signup]');
 
       if (!modal || !form) return;
-
-      const storage = (() => {
-        try {
-          return window.localStorage;
-        } catch (_) {
-          return null;
-        }
-      })();
 
       const openModal = () => {
         modal.classList.add('show');
@@ -155,33 +146,18 @@
         document.body.classList.add('modal-open');
       };
 
-      const markSeen = () => {
-        try {
-          storage?.setItem(storageKey, '1');
-          storage?.setItem(legacyStorageKey, '1');
-        } catch (_) {}
-      };
-
       const closeModal = () => {
         modal.classList.remove('show');
         modal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('modal-open');
-        markSeen();
       };
 
       const openedFromHash = window.location.hash === '#join-updates';
-      try {
-        if (storage?.getItem(legacyStorageKey) && !storage?.getItem(storageKey)) {
-          storage.setItem(storageKey, '1');
-        }
-      } catch (_) {}
       if (openedFromHash) {
         openModal();
         if (window.history?.replaceState) {
           window.history.replaceState(null, '', window.location.pathname + window.location.search);
         }
-      } else if (!storage?.getItem(storageKey) && !storage?.getItem(legacyStorageKey)) {
-        openModal();
       }
 
       openTriggers.forEach((trigger) => {
@@ -221,7 +197,6 @@
           if (!response.ok) throw new Error('signup-failed');
           setNote('Thanks. You are on the list.');
           emailInput.value = '';
-          markSeen();
           setTimeout(closeModal, 700);
         } catch (_) {
           setNote('Could not submit. Please try again.');
